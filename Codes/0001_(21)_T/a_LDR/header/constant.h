@@ -13,6 +13,10 @@ const int                                     MIN_DURATION_LED = 100;
  // maximum wait between blinks
 const int                                    MAX_DURATION_LED = 1000;
 
-const int                                 MIN_DURATION_LDR = 200; 
+const int                                     MIN_DURATION_LDR = 200; 
  // maximum wait between blinks
-const int                                  MAX_DURATION_LDR = 800;
+const int                                      MAX_DURATION_LDR = 800;
+
+const int                                          INITIAL_VALUE = 0;
+
+const int                                           BAUD_RATE = 9600;

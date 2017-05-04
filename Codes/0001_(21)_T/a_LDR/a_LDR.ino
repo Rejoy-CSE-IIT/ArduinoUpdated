@@ -2,27 +2,28 @@
 
 #include "header/constant.h"
 #include <elapsedMillis.h>
-elapsedMillis                                        timer0,timer1;
-float                                        time_LED_Counter=0.0f;
-
- 
-bool                                                 high_LED=true;
-int                                                   Interval_LED;
-
-bool                                                 high_SOUND=true;
-int                                                   Interval_SOUND;
 
 
-int                                                 interval_LDR=0;
+elapsedMillis                                        timer0,timer1;//,timer3;
+
+bool                                                    high_LED=true;
+int                                                      Interval_LED;
+
+bool                                                  high_SOUND=true;
+int                                                    Interval_SOUND;
+
+
+int                                                      interval_LDR;
 
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(BAUD_RATE);
 
     
-    timer0 = 0; // clear the timer at the end of startup
-
+    timer0 = INITIAL_VALUE; // clear the timer at the end of startup
+    timer1 = INITIAL_VALUE;
+    //timer3=0;
     pinMode(LED_PORT_13  , OUTPUT); // enable output on the led pin
     pinMode(SOUND_PORT_09, OUTPUT); // enable output on the led pin
 
@@ -38,18 +39,14 @@ void setup()
 void loop()
 {
 
-
-     
- 
-     
-    interval_LDR = analogRead(SENSOR_PIN);
-       
        
     if (timer0 > Interval_LED) 
     {
 
-         Serial.println(timer0, DEC);  // print as an ASCII-encoded decimal
-        timer0 = 0; //reset the timer
+        // Serial.println(timer0, DEC);  // print as an ASCII-encoded decimal
+        timer0 = INITIAL_VALUE; //reset the timer
+        
+         interval_LDR = analogRead(SENSOR_PIN);
         // dark short time interval
         Interval_LED = _normalized_interval_for_LED(interval_LDR);
         if(high_LED)
@@ -69,8 +66,9 @@ void loop()
     if (timer1 > Interval_SOUND) 
     {
 
-        Serial.println(timer1, DEC);  // print as an ASCII-encoded decimal
-        timer1 = 0; //reset the timer
+      //  Serial.println(timer1, DEC);  // print as an ASCII-encoded decimal
+        timer1 = INITIAL_VALUE; //reset the timer
+         interval_LDR = analogRead(SENSOR_PIN);
         // dark short time interval
         Interval_SOUND = _normalized_interval_for_Sound(interval_LDR);
         if(high_SOUND)
@@ -86,33 +84,21 @@ void loop()
        
     }
 
-
-    
-    
-
-    
-    
-    // Serial.println(timer1, DEC);  // print as an ASCII-encoded decimal
+   //  Serial.println(timer3, DEC);  // print as an ASCII-encoded decimal
     
 }
 
 int _normalized_interval_for_LED(int interval)
 {
-       
-
         int interval_LED_D =  map(interval, MIN_DURATION_LDR,MAX_DURATION_LDR, MIN_DURATION_LED,MAX_DURATION_LED); // convert to blink rate
         interval_LED_D = constrain(interval_LED_D, MIN_DURATION_LED,MAX_DURATION_LED); // constrain the value
-
         return interval_LED_D;
 }
 
 int _normalized_interval_for_Sound(int interval)
 {
-       
-
         int interval_Sound_D =  map(interval, MIN_DURATION_LDR,MAX_DURATION_LDR, MIN_DURATION_SOUND,MAX_DURATION_SOUND); // convert to blink rate
         interval_Sound_D = constrain(interval_Sound_D, MIN_DURATION_SOUND,MAX_DURATION_SOUND); // constrain the value
-
         return interval_Sound_D;
 }
 

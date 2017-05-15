@@ -20,7 +20,8 @@ Have a look at hardware/arduino/cores/arduino/Arduino.h (at least in Arduino 1.0
 	
 	const int                                           TIMER_INITIAL_VALUE = 0;
 	const int                                         TIMER_TARGET_VALUE = 1000;
-	const int                                                  DELAY_VALUE = 10;
+	const int                                                  DELAY_VALUE = 5000;
+	const int                                                  BAUD_RATE = 9600;
 
 
 #endif

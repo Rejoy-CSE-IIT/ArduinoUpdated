@@ -21,16 +21,18 @@
 class std_base
 {
   public:
-    std_base(int,int);
+    std_base(int  ,int  );
 	delay_timer(float );
 	LED_STEPS();
-	
+	elapsedMillis                                        _timer;
+	uint8_t                                              _STATE;
+	uint8_t                                              _Button;
 	
   private:
     int                                                 _pinLED;
 	int                                              _pinBUTTON;
-	elapsedMillis                                        _timer;
-	uint8_t                                              _STATE;
+	
+	
 };
 
 #endif

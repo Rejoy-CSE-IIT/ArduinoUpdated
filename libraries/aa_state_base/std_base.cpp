@@ -49,7 +49,7 @@ std_base::LED_STEPS()
    }
     
 }
-std_base::delay_timer(float delay_time)
+std_base::delay_timer(int delay_time)
 {
     delay(delay_time);
 }

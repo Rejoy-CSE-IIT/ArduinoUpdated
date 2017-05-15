@@ -22,7 +22,7 @@ class std_base
 {
   public:
     std_base(int  ,int  );
-	delay_timer(float );
+	delay_timer(int );
 	LED_STEPS();
 	elapsedMillis                                        _timer;
 	uint8_t                                              _STATE;

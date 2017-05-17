@@ -1,58 +1,44 @@
-#include <std_base.h>
 #include "header/constant_files.h"
+#include "header/qt_1_class.h"
 
 
-/*
-std_base::std_base(int pinLED,int pinBUTTON)
+void qt_1_class::Initialize_HardWare()
 {
-   pinMode(pinLED, LED_MIN);
-   pinMode(pinBUTTON, LOW);
-  _pinLED = pinLED;
-  _pinBUTTON = pinBUTTON;
-  _STATE=LED_OFF;
-   analogWrite(LED_PORT_13,LED_MIN);
-
-  
-  
-  
-}
-
-std_base::LED_STEPS()
-{
-   //  _Button = analogRead(_pinBUTTON);
-   _Button = digitalRead(_pinBUTTON);
-
-   switch(_STATE)
-   {
-	   case  LED_OFF:
+	
+     pinMode(_led_port  ,OUTPUT);
 	 
-					   if(_Button==PRESSED_VALUE_BUTTON)
-					   {
-						   _STATE= LED_ON;
-						   _timer=TIMER_INITIAL_VALUE;
-						   analogWrite(LED_PORT_13,LED_MAX);
-					   } 
-					   
-	   break;
-	   
-	   
-	   case LED_ON :
-	    
-	   				   if(_timer>=TIMER_TARGET_VALUE)
-					   {
-						   _STATE= LED_OFF;
-						   analogWrite(LED_PORT_13,0);
-					   }
-					   
+	 
+	 
+	 analogWrite(_led_port,LED_MAX); 
+	 
+	  
+     Serial.begin(BAUD_RATE);
+   
+}
+ 
 
-	   
-	   break;
-   }
-    
-}
-std_base::delay_timer(int delay_time)
+
+qt_1_class::qt_1_class(int led_port)
 {
-    delay(delay_time);
+	
+	 _led_port    =          led_port;
+	 
+	 
+ 
+
 }
-*/
+
+void qt_1_class::writeLeds(char led,int brightness)
+{
+	
+ // This is for test
+   if(led=='r') 
+   {
+	    analogWrite(_led_port,LED_MAX-brightness); 
+   }
+   
+   
+   return; 
+}
+ 
  

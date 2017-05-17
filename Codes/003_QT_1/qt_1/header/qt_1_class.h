@@ -1,7 +1,7 @@
 
 
-#ifndef STD_BASE
-#define STD_BASE
+#ifndef QT_1_CLASS
+#define QT_1_CLASS
 
 //You need a couple of other things in the header file. One is an #include statement
 // that gives you access to the standard types and constants of the Arduino
@@ -21,20 +21,16 @@
 class qt_1_class
 {
 	
-	 /*
-  public:
+	
+	
+	private:
+	           int _led_port;
+			  
+	public:
+              qt_1_class(int);	
+			  void  writeLeds(char  ,int  );
+			   void  Initialize_HardWare();
  
-    std_base(int  ,int  );
-	delay_timer(int );
-	LED_STEPS();
-	elapsedMillis                                        _timer;
-	uint8_t                                              _STATE;
-	uint8_t                                              _Button;
-	
-  private:
-    int                                                 _pinLED;
-	int                                              _pinBUTTON;*/
-	
 	
 };
 

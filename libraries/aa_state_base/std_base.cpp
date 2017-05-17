@@ -9,7 +9,7 @@ std_base::std_base(int pinLED,int pinBUTTON)
    
   _pinLED                      = pinLED;
   _pinBUTTON                   = pinBUTTON;
-  _STATE                       =LED_OFF;
+  _STATE                       = LED_OFF;
   
   
    analogWrite(LED_PORT_13,LED_MIN);

@@ -12,10 +12,10 @@ void setup()
 void loop()
 {
    //  Serial.println(corridor_led._timer, DEC);
-     Serial.print("\n Value of LED \t"); 
-     Serial.println( corridor_led._STATE, DEC);
-   // Serial.print("\n Value of Button \t"); 
-   // Serial.println( corridor_led._Button, DEC);
+   //  Serial.print("\n Value of LED \t"); 
+    // Serial.println( corridor_led._STATE, DEC);
+    Serial.print("\n Value of Button \t"); 
+    Serial.println( corridor_led._Button, DEC);
     // Serial.println("------------------------------");
     corridor_led.LED_STEPS();
     corridor_led.delay_timer(DELAY_VALUE);

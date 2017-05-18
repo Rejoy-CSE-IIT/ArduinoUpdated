@@ -315,7 +315,7 @@ vm.last.preproc.file.0.lineend=30
 vm.last.preproc.file.0.prefix_lines=0
 vm.last.preproc.file.1.file=constant.h
 vm.last.preproc.file.1.offset=0
-vm.last.preproc.file.1.length=619
+vm.last.preproc.file.1.length=623
 vm.last.preproc.file.1.linecount=23
 vm.last.preproc.file.1.linestart=30
 vm.last.preproc.file.1.lineend=53
@@ -326,7 +326,7 @@ vm.build_use_temp=1
 runtime.vm.ide.platforms.path=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\x5pe11di.mc1\Micro Platforms
 build.variant.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard
 archive_file=core.a
-extra.time.local=37673740
+extra.time.local=37973692
 tools.ctags.path={runtime.tools.ctags.path}
 tools.ctags.cmd.path={path}/ctags
 tools.ctags.pattern="{cmd.path}" -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives "{source_file}"

@@ -1,7 +1,7 @@
 
 
-#ifndef STD_BASE
-#define STD_BASE
+#ifndef CONSTANT_H
+#define CONSTANT_H
 
 //You need a couple of other things in the header file. One is an #include statement
 // that gives you access to the standard types and constants of the Arduino

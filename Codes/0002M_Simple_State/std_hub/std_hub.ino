@@ -7,6 +7,7 @@ void setup()
 {
       Serial.begin(BAUD_RATE);
      // corridor_led.initialize(LED_PORT_13,BUTTON_PORT_09);
+       Serial.print("\n Start Session \t"); 
 }
 
 void loop()

@@ -6,8 +6,10 @@ void LED_diag::initialize_HardWare()
 	pinMode(_pinLED, OUTPUT);
 	pinMode(_pinBUTTON, INPUT);
 	analogWrite(LED_PORT_13, LED_MIN);
-	Serial.begin(BAUD_RATE);
 
+#if TEST
+	Serial.begin(BAUD_RATE);
+#endif
 }
 
 

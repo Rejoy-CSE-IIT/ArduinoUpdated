@@ -60,7 +60,9 @@ void LED_diag::LED_STEPS()
 
 }
 
+#if TEST
 void LED_diag::delay_timer(int delay_time)
 {
 	delay(delay_time);
 }
+#endif

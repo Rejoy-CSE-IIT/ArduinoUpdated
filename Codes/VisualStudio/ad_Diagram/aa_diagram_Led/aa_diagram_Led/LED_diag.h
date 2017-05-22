@@ -21,14 +21,16 @@ class LED_diag
 {
 public:
 	LED_diag(int, int);
-	void delay_timer(int);
+
 	void LED_STEPS();
 	void initialize_HardWare();
-	elapsedMillis                                         _timer;
 	int                                                   _STATE;
 	int                                                  _Button;
+
+
 #if TEST
 	int                                                 _Button_test;
+	void delay_timer(int);
 #endif
 
 private:

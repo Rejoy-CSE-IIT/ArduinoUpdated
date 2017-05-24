@@ -54,7 +54,7 @@ void StateManager::Initialize_CurrentState()
 
 }
 
-StateManager* StateManager::_instanceRef = NULL;
+StateManager* StateManager::_instanceRef = nullptr;
 
 
 

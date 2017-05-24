@@ -27,10 +27,11 @@
 
 
 #if TEST
-	#define                                                  DELAY_VALUE   5000 
-	#define                                                     BAUD_RATE  9600 
+#define                                                  DELAY_VALUE   5000 
+#define                                                     BAUD_RATE  9600 
 #endif
 
 
 #endif
 #endif
+

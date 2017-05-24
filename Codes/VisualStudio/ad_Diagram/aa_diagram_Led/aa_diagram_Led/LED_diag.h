@@ -14,7 +14,7 @@
 #else
 #include "WProgram.h"
 #endif
-#include <elapsedMillis.h>
+
 #include"constant_LED.h"
 
 class LED_diag

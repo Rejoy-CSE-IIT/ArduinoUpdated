@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{edf74b3c-a2f5-45c5-bbf2-52148954a1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States\ON_STATE">
+      <UniqueIdentifier>{629ff5f7-9c99-41bd-9eac-f2c9502ccd88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States\OFF_STATE">
+      <UniqueIdentifier>{83e4622c-21dc-4177-bb27-568de91f8c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\constant">
+      <UniqueIdentifier>{a80c6603-515f-484c-a3ec-2e69beb0d269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interface">
+      <UniqueIdentifier>{f3a84bc7-34db-4955-aebc-e61b8b9be6eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\State_Manager">
+      <UniqueIdentifier>{7853da1b-6334-4569-9dc1-b59bb6bb80d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Device_Manager">
+      <UniqueIdentifier>{7edac490-8e3a-4c62-a709-5337aab46c50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ae_state_LED.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.ae_state_LED.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>Source Files\State_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>Source Files\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ON_State_LED.h">
+      <Filter>Source Files\States\ON_STATE</Filter>
+    </ClInclude>
+    <ClInclude Include="OFF_State_LED.h">
+      <Filter>Source Files\States\OFF_STATE</Filter>
+    </ClInclude>
+    <ClInclude Include="constant_LED.h">
+      <Filter>Header Files\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceManager.h">
+      <Filter>Source Files\Device_Manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>Source Files\State_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ON_State_LED.cpp">
+      <Filter>Source Files\States\ON_STATE</Filter>
+    </ClCompile>
+    <ClCompile Include="OFF_State_LED.cpp">
+      <Filter>Source Files\States\OFF_STATE</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceManager.cpp">
+      <Filter>Source Files\Device_Manager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

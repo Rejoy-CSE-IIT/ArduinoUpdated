@@ -6,8 +6,8 @@
 
 
 
-#define TEST_NORMAL                                                           false
-#define TEST_STATIC_NORMAL                                                    false
-#define TEST_POINTER                                                          true
-#define TEST_STATIC_NORMAL                                                    false
+#define TEST_NORMAL                                                           true
+#define TEST_STATIC_NORMAL                                                    true
+#define TEST_POINTER                                                          false
+#define TEST_STATIC_POINTER                                                    false
 #endif
